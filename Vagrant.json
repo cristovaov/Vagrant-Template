@@ -1,0 +1,17 @@
+{
+  "Project": {
+    "name": "vagrant-template",
+    "vagrant_box": "ubuntu/trusty64",
+    "box_ip": "172.16.0.12",
+    "box_hostname": "",
+    "synced_folder": {
+      "host_path": "project/",
+      "guest_path": "/var/project/"
+    },
+    "provision": [
+      "a", "b", "c", "d",
+      "another one",
+      "x", "y", "z"
+    ]
+  }
+}
