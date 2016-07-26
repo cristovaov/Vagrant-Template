@@ -16,6 +16,9 @@ Vagrant.configure(2) do |config|
     end
     project.vm.provider "virtualbox" do |vb|
       vb.name = set['Project']['name']
+      vb.cpus = set['Project']['vb_cpus']
+      vb.memory = set['Project']['vb_memory']
+      vb.linked_clone = set['Project']['vb_linked_clone']
     end
     project.vm.network "private_network", ip: set['Project']['box_ip']    
     project.vm.provision "shell", path: "provision.sh", privileged: false    

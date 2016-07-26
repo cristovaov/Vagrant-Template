@@ -4,6 +4,9 @@
     "vagrant_box": "ubuntu/trusty64",
     "box_ip": "172.16.0.12",
     "box_hostname": "",
+    "vb_cpus": "2",
+    "vb_memory": "512",
+    "vb_linked_clone": "true",
     "synced_folder": {
       "host_path": "project/",
       "guest_path": "/var/project/"
