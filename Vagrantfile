@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
   config.vm.define set['Project']['name'] do |project|
     project.vm.box = set['Project']['vagrant_box'] 
     if !set['Project']['box_hostname'].empty?
-      project.vm.hostname= set['Project']['box_hostname']
+      project.vm.hostname = set['Project']['box_hostname']
     end
     project.vm.provider "virtualbox" do |vb|
       vb.name = set['Project']['name']
@@ -22,8 +22,6 @@ Vagrant.configure(2) do |config|
     if set['Project'].has_key?("synced_folder")
       project.vm.synced_folder set['Project']['synced_folder']['host_path'], set['Project']['synced_folder']['guest_path'],
         create: true
-    end
-  
+    end 
   end
-  
 end
